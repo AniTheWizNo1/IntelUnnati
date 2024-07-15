@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Providers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Service Providers</h1>
+    <ul>
+        {% for provider in providers %}
+            <li>{{ provider.name }} - {{ provider.service_type }} - {{ provider.location }} - {{ provider.contact }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
